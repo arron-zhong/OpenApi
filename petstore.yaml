@@ -1,0 +1,35 @@
+openapi: 3.0.0
+info:
+  title: UPF COMMON GO 
+  version: 1.0.0    
+paths:
+  /commonmodule:
+    get:
+      responses:
+        "200":
+          description: success   
+components:
+  schemas:
+    DPIFeatureCount:
+      title: Pet Order
+      description: An order for a pets from the pet store
+      type: object
+      properties:
+        feature_id:
+          type: integer
+          format: int32
+        group_id:
+          type: integer
+          format: int32
+        ul_packets:
+          type: integer
+          format: int64
+        ul_bytes:
+          type: integer
+          format: int64
+        dl_packets:
+          type: integer
+          format: int64
+        dl_bytes:
+          type: integer
+          format: int64

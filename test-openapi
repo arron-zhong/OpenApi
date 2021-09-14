@@ -1,0 +1,10 @@
+#!/bin/bash
+
+PWD=$(pwd)
+#docker pull openapitools/openapi-generator-cli
+
+docker run --rm \
+  -v $PWD:/openapi openapitools/openapi-generator-cli generate \
+  -i /openapi/petstore.yaml \
+  -g c \
+  -o /openapi/out
